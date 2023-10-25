@@ -31,6 +31,13 @@ function AddQuestionAnswer() {
     faqItem.appendChild(faqToggle);
     var faqContainer = document.querySelector(".faq-container");
     faqContainer.appendChild(faqItem);
+    const toggles = document.querySelectorAll('.faq-toggle')
+
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        toggle.parentNode.classList.toggle('active')
+    })
+})
 }
   
 
